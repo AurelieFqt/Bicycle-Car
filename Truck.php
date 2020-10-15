@@ -59,7 +59,7 @@ class Truck extends Vehicle
     {
         if($this->cargo < $this->storageCapacity){
            return "in filling";
-        }elseif($cargo === $storageCapacity){
+        }elseif($this->cargo === $this->storageCapacity){
            return "full !";
         }
        
