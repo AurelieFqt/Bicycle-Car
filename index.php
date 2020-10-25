@@ -26,8 +26,18 @@ echo $bike->brake();
 $car = new Car("yellow", 2, "electric");
 var_dump($car);
 
-//Moving Car
-echo $car->start();
+//Moving Car -----------------------------------POO4--------------------------------------------------------->
+
+try{
+    echo $car->start();
+} catch(Exception $e){
+    $hasParkBrake == false;
+}  finally{
+    echo "Ma voiture roule comme un donut";
+}
+
+//------------------------------------------------------------------------------------------------------------
+
 echo '<br>Vitesse de la voiture : ' . $car->getCurrentSpeed() . ' km/h';
 echo '<br>Energie de la voiture : ' . $car->getEnergyLevel() . ' kb' . '<br>';
 echo $car->forward();

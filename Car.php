@@ -10,22 +10,36 @@ class Car extends Vehicle
         'electric',
     ];
     
+    //@var boolean
+    private $hasParkBrake;
+
+
     //@var string
     private $energy;
     //@var integer
     private $energyLevel;
 
-    public function __construct(string $color, int $nbSeats, string $energy)
+    public function __construct(string $color, int $nbSeats, string $energy, bool $hasParkBrake)
     {
         parent::__construct($color, $nbSeats);
         $this->setEnergy($energy);
+        $this->setEnergy($hasParkBrake);
     }
 
     public function start() :string
     {
+        if($hasParkBrake == true){
+            throw new Exception("parkbrake activated");
+        }
         $this->currentSpeed = 0;
         $this->energyLevel=100;
         return "Let's go!";
+        
+    }
+
+    public function setParkBrake()
+    {
+        $this->hasParkBrake = $hasParkBrake;
     }
 
     public function getEnergy() : int
