@@ -64,4 +64,16 @@ class Car extends Vehicle
     {
         $this->energyLevel = $energyLevel;
     }
+
+    
+    // ------------------------POO5-----------------------
+
+    public function switchOn():bool
+    {
+        return true;
+    }
+    public function switchOff():bool
+    {
+        return false;
+    }
 }
