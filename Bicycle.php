@@ -2,7 +2,7 @@
 
 require_once 'Vehicle.php';
 
-class Bicycle extends Vehicle
+class Bicycle extends Vehicle implements LightableInterface
 {
     // ------------------------POO5-----------------------
 
